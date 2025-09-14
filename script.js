@@ -7,5 +7,5 @@ const changeColor = () => {
 
 const resetColor = () => {
   head.style.color = "#333";
-  head.style.backgroundColor = "#fff";
+  head.style.backgroundColor = "#ffe8db";
 };
