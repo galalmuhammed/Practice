@@ -68,7 +68,7 @@ h1 {
     "card-5 card-5 card-4 card-4 card-3 card-3"
     "card-5 card-5 card-6 card-6 card-3 card-3";
 
-  padding-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1199px) {
@@ -243,7 +243,7 @@ footer ul li a:hover {
   }
 
   footer ul li {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 
