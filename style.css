@@ -115,7 +115,7 @@ h1 {
   height: 100%;
   border-radius: 15px;
   z-index: -1;
-  filter: blur(50px);
+  filter: blur(25px);
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
@@ -126,7 +126,7 @@ h1 {
 
 .card:hover {
   margin-top: -5px;
-  border-color: #6df09980;
+  border-color: #6df09942;
   cursor: pointer;
 }
 
@@ -166,6 +166,7 @@ h1 {
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 20px;
+
 }
 
 .card dd:not(:last-of-type) {
@@ -198,7 +199,7 @@ h1 {
 }
 
 .card .description::before {
-  content: "\f061"; /* fa-check icon */
+  content: "\f061";
   font-family: "Font Awesome 7 Free";
   font-weight: 900;
   position: absolute;
