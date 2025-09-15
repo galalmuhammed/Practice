@@ -237,6 +237,16 @@ footer ul li a:hover {
   color: var(--text-code-color);
 }
 
+@media (max-width: 767px) {
+  footer {
+    font-size: 10px;
+  }
+
+  footer ul li {
+    font-size: 10px;
+  }
+}
+
 #particles {
   position: fixed;
   top: 0;
