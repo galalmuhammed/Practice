@@ -4,31 +4,245 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- <canvas id="particles"></canvas> -->
     <div class="container">
-      <h1 id="header-one">Hello, wrold</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, animi nostrum in libero architecto ab quia.
-        Voluptate, non placeat hic beatae, possimus eligendi ducimus accusantium vitae eius aut nesciunt nam.
-      </p>
-      <ul>
-        <li>First product</li>
-        <li>Second product</li>
-        <li>Third product</li>
-      </ul>
+      <h1>Git Commands Cheat Cheet</h1>
+      <div class="card-container">
+        <div class="card important-git-card">
+          <h3>Important Git Commands</h3>
+          <dl>
+            <dt class="command">git</dt>
+            <dd class="description">Show all git commands.</dd>
 
-      <button onclick="changeColor()">Change</button>
-      <button onclick="resetColor()">Reset</button>
+            <dt class="command">git -v</dt>
+            <dd class="description">Check current Git version.</dd>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus cumque, quos eveniet ipsam ad dolorem
-        deserunt nam soluta modi. Quia officia laudantium eum, quae voluptatibus asperiores, repellat, illum inventore
-        esse nesciunt ratione magni aspernatur eaque. Porro nulla ad quia earum rem quas provident deleniti voluptates
-        exercitationem consequuntur eius id atque magnam blanditiis praesentium, illum, asperiores quae corporis sint
-        sequi adipisci? Qui ipsa, perferendis ipsam quam facere fugiat totam labore?
-      </p>
+            <dt class="command">clear</dt>
+            <dd class="description">Clear Terminal.</dd>
+
+            <dt class="command">touch &lt;file-name&gt;</dt>
+            <dd class="description">Create a file.</dd>
+
+            <dt class="command">cd &lt;path&gt;</dt>
+            <dd class="description">Change directory.</dd>
+
+            <dt class="command">ls</dt>
+            <dd class="description">List all items in current folder.</dd>
+
+            <dt class="command">ls -a</dt>
+            <dd class="description">List all items including hidden ones.</dd>
+          </dl>
+        </div>
+
+        <div class="card configure-card">
+          <h3>Configure User for the First Time</h3>
+          <dl>
+            <dt class="command">git config --global user.name "Your Name"</dt>
+            <dd class="description">Configure name.</dd>
+
+            <dt class="command">git config --global user.email "Your Email"</dt>
+            <dd class="description">Configure email.</dd>
+
+            <dt class="command">git config --global init.defaultBranch main</dt>
+            <dd class="description">Configure deafult branch.</dd>
+
+            <dt class="command">git config user.name</dt>
+            <dd class="description">Check configured username.</dd>
+
+            <dt class="command">git config user.email</dt>
+            <dd class="description">Check configured email.</dd>
+
+            <dt class="command">git config init.defaultBranch</dt>
+            <dd class="description">Check configured default branch.</dd>
+
+            <dt class="command">git config list</dt>
+            <dd class="description">Check all Git configurations.</dd>
+          </dl>
+        </div>
+
+        <div class="card working-locally-card">
+          <h3>Working with Git Locally</h3>
+          <dl>
+            <dt class="command">git init</dt>
+            <dd class="description">Initialize a local Git repository.</dd>
+
+            <dt class="command">git status</dt>
+            <dd class="description">
+              Check current status of files. (4 status):
+              <dl>
+                <dt class="command sub-command">Untracked</dt>
+                <dd class="description sub-description">New file not added yet.</dd>
+
+                <dt class="command sub-command">Modified</dt>
+                <dd class="description sub-description">File changed but not staged.</dd>
+
+                <dt class="command sub-command">Staged</dt>
+                <dd class="description sub-description">File is in staging, ready to commit.</dd>
+
+                <dt class="command sub-command">Committed</dt>
+                <dd class="description sub-description">File saved in history.</dd>
+              </dl>
+            </dd>
+
+            <dt class="command">git clean -f</dt>
+            <dd class="description">Delete all untracked files.</dd>
+
+            <dt class="command">git clean -f &lt;file-name&gt;</dt>
+            <dd class="description">Delete a specific untracked file.</dd>
+
+            <dt class="command">git clean -fd</dt>
+            <dd class="description">Delete untracked files and directories.</dd>
+
+            <dt class="command">git restore &lt;file-name&gt;</dt>
+            <dd class="description">Discard changes and restore file to last commit (tracked files only).</dd>
+
+            <dt class="command">git add &lt;file-name&gt; &lt;other-file-name&gt;</dt>
+            <dd class="description">Add one or more files to staging.</dd>
+
+            <dt class="command">git add .</dt>
+            <dd class="description">Add all files to staging.</dd>
+
+            <dt class="command">git restore --staged &lt;file-name&gt;</dt>
+            <dd class="description">Remove file from staging (back to modified/untracked).</dd>
+
+            <dt class="command">git commit -m "Enter commit message"</dt>
+            <dd class="description">Commit staged changes with a message.</dd>
+
+            <dt class="command">git log</dt>
+            <dd class="description">Show commit history.</dd>
+
+            <dt class="command">git checkout &lt;commit-id&gt;</dt>
+            <dd class="description">Switch to an older commit (detached HEAD).</dd>
+
+            <dt class="command">git checkout &lt;default-branch-name&gt;</dt>
+            <dd class="description">Switch back to the latest commit of the branch.</dd>
+
+            <dt class="command">git reset &lt;commit-id&gt;</dt>
+            <dd class="description">
+              Reset branch to a specific commit:
+              <dl>
+                <dt class="command sub-command">git reset --soft &lt;commit-id&gt;</dt>
+                <dd class="description sub-description">Keep everything staged.</dd>
+
+                <dt class="command sub-command">git reset --mixed &lt;commit-id&gt; (default)</dt>
+                <dd class="description sub-description">Keep changes, but unstaged.</dd>
+
+                <dt class="command sub-command">git reset --hard &lt;commit-id&gt;</dt>
+                <dd class="description sub-description">Erase changes — clean working tree. (Dangerous)</dd>
+              </dl>
+            </dd>
+
+            <dt class="command">git revert &lt;commit-id&gt;</dt>
+            <dd class="description">
+              Undo a commit by creating a new one (keeps history):
+              <dl>
+                <dt class="command sub-command">git revert &lt;commit-id&gt; --no-edit</dt>
+                <dd class="description sub-description">Use default message; skip editor.</dd>
+
+                <dt class="command sub-command">git revert &lt;commit-id&gt; --no-commit</dt>
+                <dd class="description sub-description">Apply changes only; commit later.</dd>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+
+        <div class="card managing-branches-card">
+          <h3>Managing Branches</h3>
+          <dl>
+            <dt class="command">git branch</dt>
+            <dd class="description">List all branches.</dd>
+
+            <dt class="command">git branch &lt;branch-name&gt;</dt>
+            <dd class="description">Create a new branch that copies the current one.</dd>
+
+            <dt class="command">git checkout &lt;branch-name&gt;</dt>
+            <dd class="description">Switch to a different branch.</dd>
+
+            <dt class="command">git merge &lt;branch-name&gt;</dt>
+            <dd class="description">Merge other branch into current one.</dd>
+
+            <dt class="command">git branch -d &lt;branch-name&gt;</dt>
+            <dd class="description">Soft delete a local branch. (only if merged)</dd>
+
+            <dt class="command">git branch -D &lt;branch-name&gt;</dt>
+            <dd class="description">Hard delete a local branch (forced delete).</dd>
+          </dl>
+        </div>
+
+        <div class="card connect-to-github-card">
+          <h3>Connecting to GitHub Repository</h3>
+          <dl>
+            <dt class="command">git remote -v</dt>
+            <dd class="description">Show remote connections.</dd>
+
+            <dt class="command">git remote add origin &lt;link-for-github-repository&gt;</dt>
+            <dd class="description">Connect local repo to GitHub.</dd>
+
+            <dt class="command">git push -u origin &lt;branch-name&gt;</dt>
+            <dd class="description">
+              Push branch to GitHub (creates a link to origin).
+              <dl>
+                <dt class="command sub-command">git push</dt>
+                <dd class="description sub-description">Works if branch is already linked.</dd>
+
+                <dt class="command sub-command">git push --force</dt>
+                <dd class="description sub-description">Overwrite remote branch.</dd>
+
+                <dt class="command sub-command">git push --force-with-lease</dt>
+                <dd class="description sub-description">Overwrite only if no one else pushed.</dd>
+              </dl>
+            </dd>
+
+            <dt class="command">git pull -n origin &lt;branch-name&gt;</dt>
+            <dd class="description">
+              Pull updates from GitHub.
+              <dl>
+                <dt class="command sub-command">git pull</dt>
+                <dd class="description sub-description">Works if branch is already linked.</dd>
+              </dl>
+            </dd>
+
+            <dt class="command">git clone &lt;repo-URL&gt;</dt>
+            <dd class="description">
+              Clone a repository (does 3 things):
+              <dl>
+                <dt class="command sub-command">Download history</dt>
+                <dd class="description sub-description">Copies full repo (commits, branches, tags).</dd>
+
+                <dt class="command sub-command">Create local repo</dt>
+                <dd class="description sub-description">Working directory + .git folder.</dd>
+
+                <dt class="command sub-command">Set remote</dt>
+                <dd class="description sub-description">Adds origin pointing to the cloned repo.</dd>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+
+        <div class="card terminal-notes-card">
+          <h3>Terminal Notes</h3>
+          <dl>
+            <dt class="command">q</dt>
+            <dd class="description">Quit the log viewer in terminal.</dd>
+
+            <dt class="command">esc → :q!</dt>
+            <dd class="description">Quit Vim without saving.</dd>
+
+            <dt class="command">i → esc → :wq</dt>
+            <dd class="description">Write a message in Vim and save & quit.</dd>
+          </dl>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
