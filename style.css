@@ -18,6 +18,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text-header-color);
   background-color: var(--bg-color);
+  min-height: 100vh;
 }
 .container {
   padding: 0 0.75rem;
@@ -166,7 +167,6 @@ h1 {
   font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 20px;
-
 }
 
 .card dd:not(:last-of-type) {
@@ -207,6 +207,34 @@ h1 {
   top: 2px;
   display: inline-block;
   font-size: 8px;
+}
+
+footer {
+  background-color: var(--bg-card-color);
+  position: relative;
+  z-index: 1;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 10px;
+}
+
+footer ul li {
+  list-style: none;
+  font-size: 18px;
+}
+
+footer ul li a {
+  color: var(--text-header-color);
+  transition: 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: var(--text-code-color);
 }
 
 #particles {
